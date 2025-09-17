@@ -8,10 +8,12 @@ export const budgetReducer = (
   state: BudgetState = initialState,
   action: BudgetActions
 ) => {
-    if(action.type === 'add-budget'){
-        return {
-            ...state,
-            budget: action.payload.budget
-        }
-    }
+  if (action.type === "add-budget") {
+    return {
+      ...state,
+      budget: action.payload.budget,
+    };
+  }
+
+  return state;
 };
